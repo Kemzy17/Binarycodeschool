@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  transition: 0.4s all;
+}
+body.locked {
+  overflow-y: hidden;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px 5%;
+  box-shadow: 0px 0px 10px 10px #eee;
+}
+.home-log {
+  width: 100px;
+}
+#links a {
+  color: #111;
+  text-decoration: none;
+  padding: 0px 10px;
+}
+#links a:hover {
+  color: red;
+}
+#links:hover > :not(:hover) {
+  color: #bbb9b9;
+  /* font-size: 15px; */
+}
+
+.apply {
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.apply:hover {
+  color: #fff;
+  background-color: rgb(159, 3, 3);
+}
+.applyhid {
+  display: none;
+}
+
+#links {
+  display: flex;
+  align-items: center;
+}
+.menu-bar {
+  display: none;
+}
+@media screen and (max-width: 1140px) {
+  nav {
+    padding: 25px 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .apply {
+    display: none;
+  }
+  .applyhid {
+    display: flex;
+    justify-content: center;
+    border: none !important;
+    background-color: red;
+    margin-top: 20px;
+  }
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+  }
+  #links {
+    width: 0px !important;
+    padding: 60px 0px;
+    overflow: hidden;
+    background-color: #eee;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+  }
+  #links.show {
+    padding: 60px 10px;
+    width: 100% !important;
+    background-color: #222;
+  }
+  .home-log {
+    font-size: 30px;
+    padding: 30px;
+  }
+  #links a {
+    padding: 15px 10px 15px 30px;
+    color: #fff;
+    border-bottom: 1px solid #bbb9b9;
+    width: calc(100% - 200px);
+  }
+  #links a:hover {
+    padding: 15px 10px 15px 37px;
+  }
+  .applyhid:hover {
+    color: #fff !important;
+    background-color: rgb(159, 3, 3);
+    padding: 15px 10px 15px 30px !important;
+  }
+  .apply {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .menu-bar {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1011;
+    margin-right: 10px;
+  }
+  .menu-bar span {
+    height: 2px;
+    background-color: #111;
+    margin: 5px;
+  }
+  .first {
+    transition: 0.8s;
+    width: 30px;
+  }
+  #first.one {
+    transition: 0.8s;
+    transform: rotate(45deg);
+    margin: 0px;
+    background-color: #fff;
+  }
+  .menu-bar:hover #first.one {
+    transform: rotate(-45deg);
+  }
+  .second {
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    width: 20px;
+  }
+  #second.two {
+    transition: 0.5s;
+    transform: scale(0, 0);
+    opacity: 0;
+    margin: 0px;
+  }
+  .third {
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    width: 30px;
+  }
+  #third.three {
+    transition: 0.8s;
+    transform: rotate(-45deg);
+    margin: 0px;
+    background-color: #fff;
+  }
+  .menu-bar:hover #third.three {
+    transform: rotate(45deg);
+  }
+  .menu-bar:hover .first {
+    transform: rotateY(180deg);
+  }
+  .menu-bar:hover .second {
+    transform: translateX(10px);
+  }
+  .menu-bar:hover .third {
+    transform: rotateY(180deg);
+  }
+}
+@media screen and (max-width: 340px) {
+  #links a {
+    width: calc(100% - 10px);
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1)),
+    url(../images/courses.jpg);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-size: cover;
+  padding: 200px 0px;
+}
+.hero1 * {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.hero1 {
+  width: 300px;
+  padding: 20px;
+  backdrop-filter: brightness(70%);
+}
+.hero1 h1 {
+  font-weight: 600;
+}
+.hero1 p {
+  margin-top: 30px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+.hero2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+form {
+  width: 320px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 7px;
+}
+form * {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+form p {
+  line-height: 25px;
+  font-weight: 500;
+}
+form .step {
+  text-align: center;
+  padding: 15px 0px;
+}
+form select {
+  width: 100%;
+  margin: 15px 0px;
+  padding: 10px;
+  border: 3px solid #999;
+  border-radius: 5px;
+  outline: none;
+}
+form select option {
+  padding: 0px !important;
+}
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+select:focus {
+  border: 3px solid rgb(234, 123, 123);
+}
+@media screen and (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero1 {
+    width: calc(100% - 60px);
+  }
+  form {
+    width: calc(100% - 100px);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .hero {
+    padding: 100px 0px;
+  }
+}
+
+.courses {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 20px;
+}
+.courses-txt {
+  max-width: 500px;
+  /* padding-top: 100px; */
+}
+.courses-txt h1 {
+  color: #fff;
+  padding-bottom: 30px;
+}
+.courses-txt p {
+  color: #fff;
+  padding-bottom: 30px;
+  line-height: 30px;
+}
+.courses img {
+  width: 40%;
+}
+@media screen and (max-width: 630px) {
+  .courses {
+    flex-direction: column;
+  }
+  .courses-txt {
+    width: calc(100%);
+  }
+  .courses img {
+    width: calc(100%);
+  }
+  .courses-txt {
+    padding-top: 0px;
+  }
+  /* .courses-txt h1 {
+    color: #fff;
+    padding-bottom: 30px;
+  }
+  .courses-txt p {
+    color: #fff;
+    padding-bottom: 30px;
+    line-height: 30px;
+  }
+  .courses img {
+    width: 40%;
+  } */
+  .king {
+  }
+}
+
+footer {
+  background-color: #000;
+}
+.pampam {
+  color: #fff;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  padding: 40px 9%;
+}
+.pampam a {
+  text-decoration: underline;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+footer {
+  /* display: flex; */
+  padding: 100px 0px;
+}
+.foot-one {
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+}
+.foot-one {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.foot-one-sub {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.foot-one-sub p {
+  padding: 7px;
+  color: #949292;
+  font-size: 14px;
+  letter-spacing: 1px;
+  /* font-family: "Space Grotesk", sans-serif; */
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+.foot-one-sub a {
+  max-width: 250px;
+  padding: 10px 7px;
+  font-size: 14px;
+  /* letter-spacing: 1px; */
+  /* font-family: "Space Grotesk", sans-serif; */
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+.foot-one-sub a:hover {
+  color: #949292;
+}
+.foot-two {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.foot-two a {
+  padding: 10px;
+}
